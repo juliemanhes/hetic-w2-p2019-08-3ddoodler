@@ -1,4 +1,8 @@
-@import 'core/color.scss';
-@import 'group/footer.scss';
 
+@import 'core/color';
+@import 'core/font';
+@import "core/reset";
+@import "core/mixins";
 
+@import 'group/footer';
+@import "group/desc";
