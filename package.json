@@ -1,0 +1,23 @@
+{
+  "name": "3ddoodler",
+  "version": "1.0.0",
+  "description": "Simple test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yahia Samy",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "css-loader": "^0.25.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
+  }
+}
