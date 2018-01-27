@@ -1,7 +1,6 @@
 // FOOTER //
 
 .footer {
-	font-family: "Avenir";
 	overflow: hidden;
 	&__container {
 		position: relative;
@@ -10,13 +9,26 @@
 		position: absolute;
 		right: -50px;
 		width: 70%;
-		top:20%;
-		margin: auto;
-		@media-screen (min-width: )
+		top:16%;
+		@include breakpoint(phablet) {
+			position:inherit;
+			float: right;
+			padding-top: 10px;
+			right: 0;
+			width: 35%;
+			display: block;
+		}
+		@include breakpoint(desktop) {
+			width: 30%;
+		}
 	}
 	&__informations {
 		text-align: center;
-		padding-top: 280px;
+		padding-top: 250px;
+		@include breakpoint(phablet) {
+			padding-top: 20px;
+			clear: both;
+		}
 	}
 }
 .footer__informations {
@@ -24,6 +36,7 @@
 		color: $orange-text;
 		text-transform: uppercase;
 		font-size: 10px;
+		padding: 20px 0;
 	}
 }
 .footer__btn {

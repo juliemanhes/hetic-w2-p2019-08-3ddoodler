@@ -8,8 +8,15 @@ var processors = [
   autoprefixer
 ];
 
+// TODO: BUILD
+
 gulp.task('font', function() {
-    return gulp.src('app/fonts/**/*.woff')
+    return gulp.src('app/fonts/**/*.otf')
+    .pipe(gulp.dest('dist/fonts'))
+});
+
+gulp.task('font', function() {
+    return gulp.src('app/fonts/**/*.otf')
     .pipe(gulp.dest('dist/fonts'))
 });
 
