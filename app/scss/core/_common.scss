@@ -3,3 +3,12 @@ $orange-btn: #FF9751;
 $orange-text: #F5A623;
 $white: #FFFFFF;
 
+.hidden-mobile {
+	@include breakpoint(phablet) {
+	display: none;
+	}
+}
+
+.hidden {
+	display: none;
+}
