@@ -1,6 +1,6 @@
 .desc {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
@@ -8,33 +8,51 @@
   background: -webkit-linear-gradient(318deg, #FF5E62, #FF9966);
   background: -o-linear-gradient(318deg, #FF5E62, #FF9966);
   background: linear-gradient(-48deg, #FF5E62, #FF9966);
+  @include breakpoint(laptop) {
+    min-height: auto;
+    position: relative;
+    padding: 100px 0;
+  }
 
   &__container {
     margin: 30px auto;
+    @include breakpoint(laptop) {
+      position: relative;
+    }
 
     &--image {
       width: 20%;
+      @include breakpoint(laptop) {
+        width: 10%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img{
+        width: 100%;
+      }
     }
 
     &--top {
-      @media screen and (min-width: 1440px) {
+      @include breakpoint(laptop) {
         @include flexbox;
         @include align-items(center);
         @include justify-content(center);
         @include flex-direction(row);
         @include align-self(flex-start);
-        margin: 20px 250px;
+        margin: 20px 150px;
       }
     }
 
     &--bottom {
-      @media screen and (min-width: 1440px) {
+      @include breakpoint(laptop) {
         @include flexbox;
         @include align-items(center);
         @include justify-content(center);
         @include flex-direction(row);
         @include align-self(flex-end);
-        margin: 20px 250px;
+        margin: 20px 150px 20px 0;
       }
     }
   }
@@ -44,7 +62,8 @@
     @include align-items(center);
     @include justify-content(center);
     @include flex-direction(column);
-    @media screen and (min-width: 1440px) {
+    margin: 30px 0;
+    @include breakpoint(laptop) {
       @include justify-content(flex-start);
       @include align-items(flex-start);
       margin: 0 30px;
@@ -53,7 +72,7 @@
 
   &__icon {
     display: none;
-    @media screen and (min-width: 1440px) {
+    @include breakpoint(laptop) {
       display: block;
     }
   }
@@ -65,31 +84,37 @@
     font-size: 20px;
     line-height: 24px;
     font-weight: bold;
-    @media screen and (min-width: 1440px) {
+    @include breakpoint(laptop) {
       text-align: left;
     }
   }
 
   &__text {
-    color: #fff;
-    font-size: 8px;
-    font-weight: 300;
 
-    &.small {
+    &--small {
       max-width: 114px;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 300;
     }
 
-    &.medium {
+    &--medium {
       max-width: 133px;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 300;
     }
 
-    &.large {
+    &--large {
       max-width: 141px;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 300;
     }
   }
 
   &__image {
-    @media screen and (min-width: 1440px) {
+    @include breakpoint(laptop) {
       width: 100%;
     }
   }

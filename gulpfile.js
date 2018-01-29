@@ -7,7 +7,6 @@ var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var gulpif = require('gulp-if');
 var minifyCSS = require('gulp-csso');
-var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');

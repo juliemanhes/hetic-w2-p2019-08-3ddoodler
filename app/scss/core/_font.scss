@@ -1,6 +1,31 @@
 @font-face {
-	font-family: "Avenir";
-	src: url('../../fonts/avenir.otf');
+ font-family: "Avenir Regular";
+ src: url("../fonts/Avenir-Book-01.ttf") format("truetype");
 }
 
-$font: "Avenir";
+@font-face {
+ font-family: "Avenir Medium";
+ src: url("../fonts/Avenir-Medium-09.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "Avenir Heavy";
+ src: url("../fonts/Avenir-Heavy-05.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "Avenir Light";
+ src: url("../fonts/Avenir-Light-07.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "Avenir Black";
+ src: url("../fonts/Avenir-Black-03.ttf") format("truetype");
+}
+
+
+$font: "Avenir Regular";
+$font-light: "Avenir Light";
+$font-heavy: "Avenir Heavy";
+$font-medium: "Avenir Medium";
+$font-black: "Avenir Black";
