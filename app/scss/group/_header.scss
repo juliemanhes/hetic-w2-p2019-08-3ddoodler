@@ -1,14 +1,13 @@
 .header {
   width: 100%;
   position: relative;
-  background: url('../img/doodler.svg');
   background: -webkit-linear-gradient(318deg, #FF5E62, #FF9966);
   background: -o-linear-gradient(318deg, #FF5E62, #FF9966);
   background: linear-gradient(-48deg, #FF5E62, #FF9966);
   &__divider {
 	  content: "";
 	  position: absolute;
-	  bottom: -44px;
+	  bottom: -33px;
 	  width: 100%;
 	  @include breakpoint(phablet) {
 	  	bottom: -64px;
@@ -20,7 +19,10 @@
 	  	bottom: -128px;
 	  }
   }
-  &__title-container {
+  &__logo--container {
+    text-align: center;
+  }
+  &__title--container {
   	background: url('../img/doodler.svg') no-repeat;
   	padding: 40px 0 0;
   	background-position: 50%;
@@ -58,7 +60,7 @@
   	display: block;
   	text-transform: uppercase;
   }
-  &__button-container {
+  &__button--container {
   	@include breakpoint(phablet) {
   		margin-top: 15px;
   	}
@@ -73,12 +75,14 @@
   		width: 25%;
   		@include breakpoint(phablet) {
   			width: 20%;
+  			margin-bottom: 10px;
   		}
   		@include breakpoint(laptop) {
   			width: 15%;
+
   		}
   		@include breakpoint(desktop) {
-  			margin-bottom: 38px;
+  			margin-bottom: 25px;
   		}
   	}
   }
@@ -96,7 +100,8 @@
   	}
   }
   p {
-  	font-size: 8px;
+  	font-size: 10px;
+  	padding-bottom: 10px;
   	@include breakpoint(phablet) {
   		font-size: 12px;
   	}
@@ -114,13 +119,43 @@
   		right: 2%;
   	}
   	@include breakpoint(laptop) {
-  		right: 28%;
+  		right: 25%;
   		font-size: 33px;
   	}
   }
 }
-
-.header__nav-burger {
+.header__desktop-nav {
+  position: absolute;
+  right: 4%;
+  top:3%;
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border:1px solid $white;
+    @include breakpoint(laptop) {
+      padding: 10px 25px;
+    }
+    &:hover {
+      background:$white;
+    }
+  }
+  a {
+    text-decoration: none;
+    color:$white;
+    font-size: 10px;
+    text-align: center;
+    @include breakpoint(laptop) {
+      font-size: 14px;
+    }
+    &:hover {
+      color:#000;
+    }
+  }
+}
+.header__nav--burger {
 	position: relative;
 	cursor: pointer;
 	div {

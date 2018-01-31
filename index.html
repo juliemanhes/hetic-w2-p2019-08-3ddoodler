@@ -8,8 +8,8 @@
   </head>
   <body>
     <header class="header">
-      <nav>
-        <div class="header__nav-burger">
+      <nav class="header__first-nav">
+        <div class="header__nav--burger">
           <div class="burger-1"></div>
           <div class="burger-2"></div>
           <div class="burger-3"></div>
@@ -20,10 +20,20 @@
           </ul>
         </div>
       </nav>
-      <div class="header__title-container">
+      <nav class="header__desktop-nav hidden-mobile">
+        <ul>
+          <li><a href="#">Start</a></li>
+          <li><a href="#">Create</a></li>
+          <li><a href="#">Pro</a></li>
+        </ul>
+      </nav>
+      <div class="header__logo--container hidden-mobile">
+        <img src="app/img/3dlogo.png">
+      </div>
+      <div class="header__title--container">
         <h1 class="header__title">Headline pour enfant</h1>
       </div>
-      <div class="header__button-container">
+      <div class="header__button--container">
         <a href="#" class="header__button">Regarder la vidéo</a>
     </div>
     <div class="header__content">
@@ -107,7 +117,11 @@
     <footer class="footer">
       <div class="footer__container">
         <img src="app/img/footer-doodler.png" alt="" class="footer__img">
+        <img src="app/img/footer-decoration.png" alt="" class="footer__decoration hidden-mobile">
         <div class="footer__informations">
+          <div class="footer__text">
+            Pour 8 ans et +
+          </div>
           <a href="#" class="footer__btn">Acheter</a>
           <p>À partir de <strong>49,99 €</strong></p>
         </div>

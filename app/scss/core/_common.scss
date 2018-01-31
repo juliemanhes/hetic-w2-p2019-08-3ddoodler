@@ -6,7 +6,7 @@ $blue:#04D3D4;
 
 //common classes //
 .hidden-mobile {
-	@include breakpoint(phablet) {
+	@include breakpoint(mobileonly) {
 	display: none;
 	}
 }
