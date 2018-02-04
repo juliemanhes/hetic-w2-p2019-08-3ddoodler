@@ -54,6 +54,18 @@
 			width: 170px;
 		}
 	}
+	&__mentions {
+		text-align: right;
+		color:$orange-btn;
+		@include breakpoint(phablet) {
+			right: 2%;
+			bottom: 2%;
+			position: absolute;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
 }
 .footer__informations {
 	p {

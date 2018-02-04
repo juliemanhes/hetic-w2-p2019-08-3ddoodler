@@ -1,3 +1,5 @@
+// HEADER //
+
 .header {
   width: 100%;
   position: relative;
@@ -42,7 +44,7 @@
   		font-size: 60px;
   	}
   	@include breakpoint(laptop) {
-  		text-align: center;
+  		text-align: left;
   		padding: 20vh;
   		transform:translateY(-20%);
   	}
@@ -64,6 +66,11 @@
   	@include breakpoint(phablet) {
   		margin-top: 15px;
   	}
+    @include breakpoint(laptop) {
+      position: absolute;
+      left: 30%;
+      top: 44%;
+    }
   }
   &__content {
   	display: flex;
@@ -79,7 +86,6 @@
   		}
   		@include breakpoint(laptop) {
   			width: 15%;
-
   		}
   		@include breakpoint(desktop) {
   			margin-bottom: 25px;
@@ -140,6 +146,9 @@
     }
     &:hover {
       background:$white;
+    }
+    &:hover a {
+      color:#000;
     }
   }
   a {
