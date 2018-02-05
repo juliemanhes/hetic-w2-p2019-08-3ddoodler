@@ -12,5 +12,18 @@ $blue:#04D3D4;
 }
 
 .hidden {
-	display: none;
+	opacity: 0;
+}
+
+.hidden-nav {
+	transform: translate(-400px);
+}
+
+.burger-transform-1 {
+	transform: rotate(45deg);
+}
+
+.burger-transform-2 {
+	transform: rotate(-45deg);
+	margin-top: -12px;
 }
