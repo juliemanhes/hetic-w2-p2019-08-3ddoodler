@@ -74,7 +74,7 @@
 	img {
 		width: 70%;
 		@include breakpoint(phablet) {
-			width: 40%;
+			width: 35%;
 			margin-top: 100px;
 		}
 	}
@@ -117,18 +117,27 @@
 .pro__contact {
 	width: 90%;
 	text-align: left;
-	margin: 0 auto;
+	margin: 15px auto;
 	@include breakpoint(phablet) {
-		width: 30%;
+		width: 50%;
 		text-align: left;
 		margin-left: 50px;
 	}
+	@include breakpoint(laptop) {
+		width: 40%;
+	}
 	p {
-		font-size: 16px;
+		font-size: 12px;
+		@include breakpoint(laptop) {
+			font-size: 16px;
+		}
 	}
 	h4 {
-		font-size: 20px;
+		font-size: 16px;
 		margin-top: 5px;
+		@include breakpoint(laptop) {
+			font-size: 20px;
+		}
 	}
 	a {
 		text-decoration: none;

@@ -55,7 +55,8 @@
 		}
 	}
 	&__mentions {
-		text-align: right;
+		text-align: left;
+		margin-left:20px;
 		color:$orange-btn;
 		@include breakpoint(phablet) {
 			right: 2%;

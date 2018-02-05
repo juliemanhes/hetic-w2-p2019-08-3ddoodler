@@ -170,6 +170,7 @@
 	div {
 		position: absolute;
 		width: 25px;
+    z-index: 11;
 		height: 0.8px;
 		left:20px;
 		background: $white;
@@ -183,4 +184,11 @@
 	.burger-3 {
 		top:40px;
 	}
+}
+.header__nav {
+  background:#fff;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
 }
