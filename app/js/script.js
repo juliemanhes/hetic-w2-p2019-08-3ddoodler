@@ -85,8 +85,6 @@ if (window.innerWidth <= 800) {
 }
 
 window.addEventListener("resize", function() {
-	console.log(window);
-	console.log(window.innerWidth);
 	if (window.innerWidth <= 800) {
 		homeSlider();
 	} else {

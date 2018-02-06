@@ -1,19 +1,19 @@
-var babelify = require('babelify');
-var browserify = require('browserify')
-var buffer = require('vinyl-buffer');
-var concat = require('gulp-concat');
-var del = require('del');
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var gulpif = require('gulp-if');
-var minifyCSS = require('gulp-csso');
-var sass = require('gulp-sass');
-var source = require('vinyl-source-stream');
-var sourcemaps = require('gulp-sourcemaps');
-var sync = require('browser-sync').create();
-var uglify = require('gulp-uglify');
+const babelify = require('babelify');
+const browserify = require('browserify')
+const buffer = require('vinyl-buffer');
+const concat = require('gulp-concat');
+const del = require('del');
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const gulpif = require('gulp-if');
+const minifyCSS = require('gulp-csso');
+const sass = require('gulp-sass');
+const source = require('vinyl-source-stream');
+const sourcemaps = require('gulp-sourcemaps');
+const sync = require('browser-sync').create();
+const uglify = require('gulp-uglify');
 
-var isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production';
 
 /**
  * SCSS
@@ -73,6 +73,13 @@ function clean() {
   return del(['dist']);
 }
 
+/**
+* HTML
+*/
+function html() {
+    return gulp.src('app/**/*.html')
+        .pipe(gulp.dest('dist/'));
+}
 
 
 gulp.task('build', gulp.series(clean, gulp.parallel(scss, js, images, fonts)));
