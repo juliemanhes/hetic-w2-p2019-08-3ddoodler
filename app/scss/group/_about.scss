@@ -3,7 +3,7 @@
   width: 100%;
   position: relative;
 
-  &_image {
+  &__image {
     position: absolute;
     bottom: 75%;
     width: 45%;
@@ -14,7 +14,7 @@
     }
   }
 
-  &_container {
+  &__container {
     width: 100%;
     display: flex;
     align-items: center;
