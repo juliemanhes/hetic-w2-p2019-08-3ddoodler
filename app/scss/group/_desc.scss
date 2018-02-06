@@ -93,6 +93,9 @@
       color: #fff;
       font-size: 8px;
       font-weight: 300;
+      @include breakpoint(laptop) {
+        font-size: 16px;
+      }
     }
 
     &--medium {
@@ -100,6 +103,9 @@
       color: #fff;
       font-size: 8px;
       font-weight: 300;
+      @include breakpoint(laptop) {
+        font-size: 16px;
+      }
     }
 
     &--large {
@@ -107,6 +113,9 @@
       color: #fff;
       font-size: 8px;
       font-weight: 300;
+      @include breakpoint(laptop) {
+        font-size: 16px;
+      }
     }
   }
 
