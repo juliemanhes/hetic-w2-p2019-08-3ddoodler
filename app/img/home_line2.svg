@@ -1,0 +1,16 @@
+<svg width="335" height="588" viewBox="0 0 335 588" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Line 2 Copy</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1965 -393)">
+<g id="Line 2 Copy">
+<use xlink:href="#path0_stroke" transform="translate(-1963 395)" fill="url(#paint0_linear)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 584 -331 0 165.5 0)">
+<stop offset="0" stop-color="#0CF1F2" stop-opacity="0.01"/>
+<stop offset="1" stop-color="#05DFE0"/>
+</linearGradient>
+<path id="path0_stroke" d="M 0.86998 -0.493088L 0.376892 -1.36307L -1.36307 -0.376892L -0.86998 0.493088L 0.86998 -0.493088ZM 330.13 584.493L 330.623 585.363L 332.363 584.377L 331.87 583.507L 330.13 584.493ZM -0.86998 0.493088L 330.13 584.493L 331.87 583.507L 0.86998 -0.493088L -0.86998 0.493088Z"/>
+</defs>
+</svg>
