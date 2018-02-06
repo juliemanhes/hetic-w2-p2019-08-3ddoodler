@@ -13,10 +13,14 @@
       padding: 10px 25px;
     }
     &:hover {
-      background:$white;
+      @include breakpoint(laptop) {
+        background:$white;
+      }
     }
     &:hover a {
-      color:#000;
+      @include breakpoint(laptop) {
+        color:#000;
+      }
     }
   }
   a {
@@ -28,7 +32,9 @@
       font-size: 14px;
     }
     &:hover {
-      color:#000;
+      @include breakpoint(laptop) {
+        color:#000;
+      }
     }
   }
 }
@@ -48,7 +54,7 @@
 		background: $white;
 	}
 	.burger-1 {
-		top:30px;	
+		top:30px;
 	}
 	.burger-2 {
 		top:36px;
@@ -103,7 +109,7 @@
     font-size: 20px;
     position: relative;
   }
-  .header__nav-arrow {  
+  .header__nav-arrow {
     position: absolute;
     transition:0.5s;
     right: 15%;

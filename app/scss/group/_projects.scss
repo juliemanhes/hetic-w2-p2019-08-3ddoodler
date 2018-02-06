@@ -71,15 +71,18 @@
 
         &:hover {
           &:after {
-            width: 100%;
-            transition: 0.4s;
+            @include breakpoint(laptop) {
+              width: 100%;
+              transition: 0.4s;
+            }
           }
 
           a {
-            color: $white;
-            z-index: 2;
-            transition: 0.3s;
-
+            @include breakpoint(laptop) {
+              color: $white;
+              z-index: 2;
+              transition: 0.3s;
+            }
           }
         }
 

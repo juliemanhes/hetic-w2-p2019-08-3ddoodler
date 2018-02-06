@@ -1,11 +1,39 @@
 .product {
   width: 100%;
   height: 100vh;
+  position: relative;
 
   @include breakpoint(tablet) {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__slider--prev,
+  &__slider--next {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+    img {
+      cursor: pointer;
+      margin: 20px;
+    }
+  }
+
+  &__slider--prev {
+    left: 0;
+  }
+
+  &__slider--next {
+    right: 0;
   }
 
   &__single {
@@ -57,13 +85,15 @@
             }
 
             &:hover {
-              background: none;
-              transition: 0.4s;
-
-              &:after {
-                width: 100%;
+              @include breakpoint(laptop) {
+                background: none;
                 transition: 0.4s;
-                z-index: -1;
+
+                &:after {
+                  width: 100%;
+                  transition: 0.4s;
+                  z-index: -1;
+                }
               }
             }
 
@@ -90,9 +120,11 @@
           &--soon {
             background-color: $blue;
             &:hover {
-              a{
-                color: $blue;
-                transition: 0.4s;
+              @include breakpoint(laptop) {
+                a{
+                  color: $blue;
+                  transition: 0.4s;
+                }
               }
             }
           }
@@ -100,9 +132,11 @@
           &--buy {
             background-color: $orange-btn;
             &:hover {
-              a{
-                color: $orange-btn;
-                transition: 0.4s;
+              @include breakpoint(laptop) {
+                a{
+                  color: $orange-btn;
+                  transition: 0.4s;
+                }
               }
             }
           }
@@ -110,9 +144,11 @@
           &--more {
             background-color: $dark-grey;
             &:hover {
-              a{
-                color: $dark-grey;
-                transition: 0.4s;
+              @include breakpoint(laptop) {
+                a{
+                  color: $dark-grey;
+                  transition: 0.4s;
+                }
               }
             }
           }
