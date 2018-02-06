@@ -10,5 +10,17 @@ burger.addEventListener('click', function() {
 	burger1.classList.toggle('burger-transform-1');
 	burger2.classList.toggle('hidden');
 	burger3.classList.toggle('burger-transform-2');
-
 });
+
+//nav tab//
+
+var arrow = document.querySelectorAll('.header__nav-arrow');
+var list = document.querySelectorAll('.header__nav-tab');
+
+for (let i = 0; i < arrow.length; i++) {
+	arrow[i].addEventListener('click', function() {
+		list[i].classList.toggle('hidden-tab');
+		this.classList.toggle('rotate-arrow');
+	});
+
+}

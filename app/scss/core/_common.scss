@@ -16,6 +16,15 @@ $dark-grey:#2D2D2D;
 	opacity: 0;
 }
 
+.rotate-arrow {
+	transform:rotate(180deg);
+	transition:0.5s;
+}
+
+.hidden-tab {
+	display: none;
+}
+
 .hidden-nav {
 	transform: translate(-1500px);
 }
