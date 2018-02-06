@@ -14,7 +14,6 @@ burger.addEventListener('click', function() {
 });
 
 //nav tab//
-
 var arrow = document.querySelectorAll('.header__nav-arrow');
 var list = document.querySelectorAll('.header__nav-tab');
 
@@ -27,10 +26,12 @@ for (let i = 0; i < arrow.length; i++) {
 
 // burger background //
 document.addEventListener('wheel', function (event) {
-	if (document.body.scrollTop  > 500 || event.pageY > 500) {
-		burger.style.background = '#05DFE0';
-	}
-	else if (document.body.scrollTop  < 500 || event.pageY < 500) {
-		burger.style.background = 'transparent';
+	if (!burger.classList.contains('home-burger')) {
+		if (document.body.scrollTop  > 500 || event.pageY > 500) {
+			burger.style.background = '#05DFE0';
+		}
+		else if (document.body.scrollTop  < 500 || event.pageY < 500) {
+			burger.style.background = 'transparent';
+		}
 	}
 });
