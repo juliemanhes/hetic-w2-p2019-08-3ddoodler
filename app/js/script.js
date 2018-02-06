@@ -7,6 +7,7 @@ var burger3 = document.querySelector('.burger-3');
 
 burger.addEventListener('click', function() {
 	nav.classList.toggle('hidden-nav');
+	burger.style.background = 'transparent';
 	burger1.classList.toggle('burger-transform-1');
 	burger2.classList.toggle('hidden');
 	burger3.classList.toggle('burger-transform-2');
@@ -22,5 +23,14 @@ for (let i = 0; i < arrow.length; i++) {
 		list[i].classList.toggle('hidden-tab');
 		this.classList.toggle('rotate-arrow');
 	});
-
 }
+
+// burger background //
+document.addEventListener('wheel', function (event) {
+	if (document.body.scrollTop  > 500 || event.pageY > 500) {
+		burger.style.background = '#05DFE0';
+	}
+	else if (document.body.scrollTop  < 500 || event.pageY < 500) {
+		burger.style.background = 'transparent';
+	}
+});

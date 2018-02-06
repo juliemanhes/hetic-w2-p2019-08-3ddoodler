@@ -36,8 +36,8 @@
 .header__nav--burger {
 	position: relative;
 	cursor: pointer;
-  height: 85px;
-  width: 85px;
+  height: 70px;
+  width: 75px;
 	div {
 		position: absolute;
 		width: 25px;
@@ -107,6 +107,7 @@
     position: absolute;
     transition:0.5s;
     right: 15%;
+    cursor:pointer;
   }
 }
 .header__nav-tab {
@@ -151,5 +152,28 @@
   }
   li {
     padding-left: 20px;
+  }
+}
+
+// HEADER HOME //
+
+.header__home {
+  .header__nav--burger {
+    div {
+      background: #05DFE0;
+    }
+  }
+  .header__desktop-nav {
+    padding-top: 30px;
+    li {
+      @include breakpoint(laptop) {
+        border:1px solid #000;
+      }
+    }
+    a {
+      @include breakpoint(laptop) {
+        color:#000;
+      }
+    }
   }
 }
