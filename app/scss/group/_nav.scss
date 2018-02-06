@@ -172,12 +172,12 @@
   .header__desktop-nav {
     padding-top: 30px;
     li {
-      @include breakpoint(laptop) {
+      @include breakpoint(phablet) {
         border:1px solid #000;
       }
     }
     a {
-      @include breakpoint(laptop) {
+      @include breakpoint(phablet) {
         color:#000;
       }
     }
