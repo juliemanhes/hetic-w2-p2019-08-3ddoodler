@@ -2,13 +2,38 @@
 $orange-btn: #FF9751;
 $orange-text: #F5A623;
 $white: #FFFFFF;
+$blue:#04D3D4;
+$dark-grey:#2D2D2D;
 
+//common classes //
 .hidden-mobile {
-	@include breakpoint(phablet) {
+	@include breakpoint(mobileonly) {
 	display: none;
 	}
 }
 
 .hidden {
+	opacity: 0;
+}
+
+.rotate-arrow {
+	transform:rotate(180deg);
+	transition:0.5s;
+}
+
+.hidden-tab {
 	display: none;
+}
+
+.hidden-nav {
+	transform: translate(-1500px);
+}
+
+.burger-transform-1 {
+	transform: rotate(45deg);
+}
+
+.burger-transform-2 {
+	transform: rotate(-45deg);
+	margin-top: -12px;
 }

@@ -1,0 +1,142 @@
+.projects {
+  width: 100%;
+  margin: 150px auto 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__title {
+    width: 95%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font;
+    font-size: 28px;
+
+    @include breakpoint(tablet) {
+      text-align: left;
+      width: 70%;
+    }
+  }
+
+  &__nav {
+    margin-top: 30px;
+    width: 95%;
+
+    @include breakpoint(tablet) {
+      width: 70%;
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint(tablet) {
+        max-width: 45%;
+      }
+
+      li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 3px solid $dark-grey;
+        border-top: 3px solid $dark-grey;
+        border-bottom: 3px solid $dark-grey;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+
+        @include breakpoint(tablet) {
+          padding: 15px 0;
+        }
+
+        &:last-child {
+          border-right: 3px solid $dark-grey;
+        }
+
+        &:after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: $dark-grey;
+          transition: 0.4s;
+        }
+
+        &:hover {
+          &:after {
+            @include breakpoint(laptop) {
+              width: 100%;
+              transition: 0.4s;
+            }
+          }
+
+          a {
+            @include breakpoint(laptop) {
+              color: $white;
+              z-index: 2;
+              transition: 0.3s;
+            }
+          }
+        }
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $dark-grey;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  &__container {
+    width: 200%;
+    margin-top: 50px;
+    display: flex;
+    float: left;
+    align-self: flex-start;
+    justify-content: space-between;
+    transform: translateX(7.5%);
+    cursor: grab;
+
+    @include breakpoint(tablet) {
+      width: 150%;
+      transform: translateX(10%);
+    }
+
+    .single-project {
+      width: 20%;
+      margin: 20px 20px 20px 0;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      &__title {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: flex-end;
+        background: linear-gradient(180deg, rgba(101, 101, 101, 0.0001) 0%, rgba(45, 45, 45, 0.750481) 100%);
+
+        h3 {
+          color: $white;
+          font-family: $font-heavy;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.about {
+  margin-top: 100px;
+  width: 100%;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    bottom: 75%;
+    width: 45%;
+
+    @include breakpoint(laptop) {
+      width: 25%;
+      bottom: 55%;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include breakpoint(laptop) {
+      margin: 0 auto;
+      width: 70%;
+    }
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $font-light;
+      font-size: 20px;
+      margin-bottom: 25px;
+
+      @include breakpoint(laptop) {
+        width: 100%;
+        text-align: right;
+      }
+
+      &:after {
+        content: '';
+        width: 250px;
+        height: 3px;
+        display: block;
+        margin-top: 10px;
+        background: $blue;
+
+        @include breakpoint(laptop) {
+          width: 100%;
+        }
+      }
+    }
+
+    p {
+      text-align: left;
+      width: 75%;
+      line-height: 30px;
+
+      @include breakpoint(laptop) {
+        width: 65%;
+        align-self: flex-end;
+        text-align: justify;
+      }
+
+    }
+  }
+}

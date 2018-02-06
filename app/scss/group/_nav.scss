@@ -1,0 +1,185 @@
+.header__desktop-nav {
+  position: absolute;
+  right: 4%;
+  top:3%;
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border:1px solid $white;
+    @include breakpoint(laptop) {
+      padding: 10px 25px;
+    }
+    &:hover {
+      @include breakpoint(laptop) {
+        background:$white;
+      }
+    }
+    &:hover a {
+      @include breakpoint(laptop) {
+        color:#000;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color:$white;
+    font-size: 10px;
+    text-align: center;
+    @include breakpoint(laptop) {
+      font-size: 14px;
+    }
+    &:hover {
+      @include breakpoint(laptop) {
+        color:#000;
+      }
+    }
+  }
+}
+
+.header__nav--burger {
+	position: relative;
+	cursor: pointer;
+  height: 70px;
+  width: 75px;
+	div {
+		position: absolute;
+		width: 25px;
+    z-index: 30;
+		height: 1.5px;
+		left:20px;
+    transition:0.5s;
+		background: $white;
+	}
+	.burger-1 {
+		top:30px;
+	}
+	.burger-2 {
+		top:36px;
+	}
+	.burger-3 {
+		top:42px;
+	}
+}
+.header__first-nav {
+  z-index: 100;
+  position: fixed;
+}
+.header__nav-logo {
+    position: absolute;
+    right: 10%;
+    top: 2%;
+  }
+.header__nav {
+  background:#2D2D2D;
+  position: fixed;
+  width: 100%;
+  transition:1s;
+  height: 100vh;
+  padding-top:100px;
+  z-index: 10;
+  @include breakpoint(phablet) {
+    width: 43%;
+    height: 100%;
+  }
+  @include breakpoint(laptop) {
+    width:30%;
+  }
+  .header__desktop-nav {
+    text-align: center;
+    position: inherit;
+    margin: 20px auto;
+    width: 71%;
+    font-size: 16px;
+    padding-top: 30px;
+    @include breakpoint(phablet) {
+      display: none;
+    }
+  }
+}
+.header__nav-inner {
+  margin-top: 10px;
+  li {
+    text-transform: uppercase;
+    color:$white;
+    padding-left: 30px;
+    margin-top: 15px;
+    font-size: 20px;
+    position: relative;
+  }
+  .header__nav-arrow {
+    position: absolute;
+    transition:0.5s;
+    right: 15%;
+    cursor:pointer;
+  }
+}
+.header__nav-tab {
+  border-left: 1px solid #50E3C2;
+  margin-left: 10px;
+  li {
+    font-size: 18px;
+    text-transform: none;
+    margin-top: 8px;
+    padding-left: 5px;
+    @include breakpoint(laptop) {
+      margin-top: 12px;
+    }
+  }
+  a {
+    color:#939393;
+    text-decoration: none;
+  }
+}
+.header__nav-icon {
+  background: -webkit-linear-gradient(318deg, #FF5E62, #FF9966);
+  background: -o-linear-gradient(318deg, #FF5E62, #FF9966);
+  background: linear-gradient(-48deg, #FF5E62, #FF9966);
+  padding: 10px;
+  img {
+    margin-right: 20px;
+  }
+  a {
+    color:#000;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+.header__nav-socials {
+  background: -webkit-linear-gradient(318deg, #FF5E62, #FF9966);
+  background: -o-linear-gradient(318deg, #FF5E62, #FF9966);
+  background: linear-gradient(-48deg, #FF5E62, #FF9966);
+  ul {
+    display: flex;
+    margin-left: 30px;
+    padding-bottom: 10px;
+  }
+  li {
+    padding-left: 20px;
+  }
+}
+
+// HEADER HOME //
+
+.header__home {
+  .header__nav--burger {
+    div {
+      background: #05DFE0;
+    }
+  }
+  .header__desktop-nav {
+    padding-top: 30px;
+    li {
+      @include breakpoint(phablet) {
+        border:1px solid #000;
+      }
+    }
+    a {
+      @include breakpoint(phablet) {
+        color:#000;
+      }
+    }
+  }
+}

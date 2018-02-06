@@ -1,0 +1,95 @@
+.landing {
+  padding-top: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(161.11deg, #FDFBFB 68.24%, #EBEDEE 111.07%);
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: $font-black;
+    text-transform: uppercase;
+    font-size: 75px;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    color: $dark-grey;
+    @include breakpoint(tablet) {
+      max-width: 51%;
+    }
+    span {
+      font-family: $font-light;
+      font-size: 75px;
+      color: $dark-grey;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform: translateY(-10%);
+    @include breakpoint(tablet) {
+      width: 50%;
+      transform: translate(25%, -10%);
+    }
+
+    .model {
+      width: 50%;
+      display: flex;
+      position: relative;
+
+      @include breakpoint(tablet) {
+        width: 25%;
+      }
+
+      &__stroke {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: -50%;
+        transform: rotateX(15deg);
+      }
+
+      &__doodler {
+        z-index: 2;
+        display: block;
+        margin: 0 auto;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__text {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      width: 25%;
+      transform: translateX(25%);
+    }
+
+    p {
+      font-family: $font-light;
+    }
+
+    button {
+      color: $blue;
+      background: $dark-grey;
+      border: 3px solid $blue;
+      margin: 60px auto;
+      padding: 15px 25px;
+      font-family: $font-black;
+      cursor: pointer;
+    }
+  }
+}

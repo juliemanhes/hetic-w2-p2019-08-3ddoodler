@@ -4,7 +4,13 @@
 @import "core/mixins";
 @import 'core/common';
 
-// @import 'group/header';
+@import 'group/header';
+@import 'group/nav';
+@import 'group/landing';
+@import 'group/about';
+@import 'group/projects';
+@import 'group/product';
 @import 'group/creativity';
+@import 'group/pro';
 @import "group/desc";
 @import 'group/footer';
