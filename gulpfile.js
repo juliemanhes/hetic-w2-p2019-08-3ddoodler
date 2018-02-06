@@ -68,6 +68,14 @@ function fonts() {
 }
 
 /**
+* HTML
+*/
+function html() {
+  return gulp.src('app/**/*.html')
+  .pipe(gulp.dest('dist/'));
+}
+
+/**
  * GLOBAL
  */
 
@@ -75,13 +83,6 @@ function clean() {
   return del(['dist']);
 }
 
-/**
-* HTML
-*/
-function html() {
-    return gulp.src('app/**/*.html')
-        .pipe(gulp.dest('dist/'));
-}
 
 
 gulp.task('build', gulp.series(clean, gulp.parallel(html, scss, js, images, fonts)));
