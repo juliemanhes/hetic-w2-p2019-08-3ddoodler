@@ -18,7 +18,7 @@
   }
   .header__divider {
   	@include breakpoint(desktop) {
-	  	bottom: -112px;
+	  	bottom: -125px;
 	  }
   }
   .header__title {
@@ -34,15 +34,21 @@
   	}
   }
   .header__text {
+  	@include breakpoint(laptop) {
+  		margin-bottom: 13%;
+  	}
   	h3 {
   		@include breakpoint(phablet) {
   			width: 20%;
   			right: 4%;
   			bottom: 57%;
   		}
-  		@include breakpoint(laptop) {
-  			right: 23%;
-  			bottom: 50%;
+  		&.subtitle {
+  			@include breakpoint(laptop) {
+  				right: 13%;
+  				width: 20%;
+  				bottom: 75%;
+  			}
   		}
   	}
   }
@@ -76,7 +82,9 @@
 		width: 70%;
 		@include breakpoint(phablet) {
 			width: 35%;
-			margin-top: 100px;
+			display: block;
+			padding: 0;
+			margin:50px auto;
 		}
 	}
 	.footer__informations {
@@ -128,6 +136,7 @@
 	}
 	@include breakpoint(laptop) {
 		width: 40%;
+		text-align: left;
 	}
 	p {
 		font-size: 12px;
