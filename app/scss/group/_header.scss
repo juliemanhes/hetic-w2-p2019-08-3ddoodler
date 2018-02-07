@@ -1,5 +1,4 @@
 // HEADER //
-
 .header {
   width: 100%;
   position: relative;
@@ -51,16 +50,66 @@
   }
   &__button {
   	width: 166px;
-  	padding-top: 12px;
   	height: 36px;
-  	text-decoration: none;
-  	margin:0 auto;
+  	margin: 0 auto;
   	text-align: center;
-  	background: $white;
-  	color:$blue;
-  	font-size: 12px;
+  	background: none;
   	display: block;
-  	text-transform: uppercase;
+  	position: relative;
+    
+    a {
+      font-size: 12px;
+      text-transform: uppercase;
+      color:$blue;
+      text-decoration: none;    
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $dark-grey;
+        transition: 0.4s;
+        z-index: 2;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        transition: 0.4s;
+        z-index: 1;
+      }
+
+      &:hover {        
+        a {
+          @include breakpoint(laptop) {
+           color:$white;
+           transition: 0.4s;
+          }
+        }
+        &:after {
+          @include breakpoint(laptop) {
+            width: 100%;
+            transition: 0.4s;
+          }
+        }
+      }
   }
   &__button--container {
   	@include breakpoint(phablet) {
@@ -173,6 +222,7 @@
 .header__nav--burger {
 	position: relative;
 	cursor: pointer;
+  transition: 0.4s;
 	div {
 		position: absolute;
 		width: 25px;
