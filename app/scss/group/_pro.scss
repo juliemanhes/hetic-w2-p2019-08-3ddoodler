@@ -39,7 +39,7 @@
   	}
   	h3 {
   		@include breakpoint(phablet) {
-  			width: 20%;
+  			width: 100%;
   			right: 4%;
   			bottom: 57%;
   		}
@@ -94,7 +94,7 @@
 			margin-left: 20%;
 			text-align: center;
 		}
-		p {			
+		p {
 			color:#05DFE0;
 			width: 100%;
 		}
@@ -127,7 +127,7 @@
 
 .pro__contact {
 	width: 90%;
-	text-align: left;
+	text-align: center;
 	margin: 15px auto;
 	@include breakpoint(phablet) {
 		width: 50%;

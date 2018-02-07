@@ -13,6 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
+const pxtorem = require('gulp-pxtorem');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -25,6 +26,7 @@ function scss() {
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass())
     .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false }))
+    .pipe(pxtorem())
     .pipe(gulpif(isProd, minifyCSS()))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(gulp.dest('dist/css'))

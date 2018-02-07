@@ -60,7 +60,7 @@
 	}
 	&__mentions {
 		text-align: center;
-		margin-left:20px;
+		// margin-left:20px;
 		@include breakpoint(phablet) {
 			right: 2%;
 			bottom: 2%;
@@ -118,4 +118,3 @@
 		line-height: 22px;
 	}
 }
-

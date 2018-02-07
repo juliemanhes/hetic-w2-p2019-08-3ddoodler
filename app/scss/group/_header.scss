@@ -1,5 +1,4 @@
 // HEADER //
-
 .header {
   width: 100%;
   position: relative;
@@ -7,19 +6,12 @@
   background: -o-linear-gradient(318deg, #FF5E62, #FF9966);
   background: linear-gradient(-48deg, #FF5E62, #FF9966);
   &__divider {
-	  content: "";
-	  position: absolute;
-	  bottom: -33px;
 	  width: 100%;
-	  @include breakpoint(phablet) {
-	  	bottom: -64px;
-	  }
-	  @include breakpoint(laptop) {
-	  	bottom: -96px;
-	  }
-	  @include breakpoint(desktop) {
-	  	bottom: -128px;
-	  }
+    transform: translateY(5px);
+
+    &.pro_divider{
+      width: calc(100%/3);
+    }
   }
   &__logo--container {
     text-align: center;
@@ -50,26 +42,77 @@
   	}
   }
   &__button {
-  	width: 166px;
-  	padding-top: 12px;
+  	width: 200px;
   	height: 36px;
-  	text-decoration: none;
-  	margin:0 auto;
+  	margin: 0 auto;
   	text-align: center;
-  	background: $white;
-  	color:$blue;
-  	font-size: 12px;
+  	background: none;
   	display: block;
-  	text-transform: uppercase;
+  	position: relative;
+
+    a {
+      font-size: 15px;
+      text-transform: uppercase;
+      color:$blue;
+      text-decoration: none;
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $dark-grey;
+        transition: 0.4s;
+        z-index: 2;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        transition: 0.4s;
+        z-index: 1;
+      }
+
+      &:hover {
+        a {
+          @include breakpoint(laptop) {
+           color:$white;
+           transition: 0.4s;
+          }
+        }
+        &:after {
+          @include breakpoint(laptop) {
+            width: 100%;
+            transition: 0.4s;
+          }
+        }
+      }
   }
   &__button--container {
   	@include breakpoint(phablet) {
   		margin-top: 15px;
   	}
     @include breakpoint(laptop) {
-      position: absolute;
-      left: 30%;
-      top: 44%;
+      // position: absolute;
+      // left: 30%;
+      // top: 44%;
+      transform: translate(-15%, -44%);
     }
   }
   &__content {
@@ -78,40 +121,52 @@
   	margin-top: 20px;
   	align-items:center;
   	position: relative;
-  	img {
-  		width: 25%;
-  		@include breakpoint(phablet) {
-  			width: 20%;
-  			margin-bottom: 10px;
-  		}
-  		@include breakpoint(laptop) {
-  			width: 15%;
-  		}
-  		@include breakpoint(desktop) {
-  			margin-bottom: 25px;
-  		}
-  	}
+    justify-content: center;
+  	// img {
+    //   position: absolute;
+    //   bottom: -50%;
+    //   left: 0;
+  	// 	width: 25%;
+  	// 	@include breakpoint(phablet) {
+  	// 		width: 20%;
+  	// 		margin-bottom: 10px;
+  	// 	}
+  	// 	@include breakpoint(laptop) {
+  	// 		width: 15%;
+  	// 	}
+  	// 	@include breakpoint(desktop) {
+  	// 		margin-bottom: 25px;
+  	// 	}
+  	// }
   }
   &__text {
   	margin-bottom: 20px;
   	width: 65%;
   	padding-left: 20px;
+    transform: translateY(50%);
+
   	@include breakpoint(phablet) {
   		margin-bottom: 63px;
   		width: 60%;
   	}
   	@include breakpoint(laptop) {
+      transform: translateY(200%);
   		margin-bottom: 0;
-  		width: 40%;
+  		width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
   	}
   }
   p {
-  	font-size: 10px;
+  	font-size: 18px;
   	padding-bottom: 10px;
   	@include breakpoint(phablet) {
-  		font-size: 12px;
+  		font-size: 15px;
   	}
   	@include breakpoint(laptop) {
+      max-width: 400px;
   		font-size: 16px;
   	}
   }
@@ -119,13 +174,13 @@
   	text-align: center;
   	font-family: $font-black;
   	margin-bottom: 10px;
-  	font-size:20px;
+  	font-size: 22px;
   	@include breakpoint(phablet) {
-  		position: absolute;
-  		right: 2%;
+  		// position: absolute;
+  		// right: 2%;
   	}
   	@include breakpoint(laptop) {
-  		right: 25%;
+  		// right: 25%;
   		font-size: 33px;
   	}
   }
@@ -173,6 +228,7 @@
 .header__nav--burger {
 	position: relative;
 	cursor: pointer;
+  transition: 0.4s;
 	div {
 		position: absolute;
 		width: 25px;

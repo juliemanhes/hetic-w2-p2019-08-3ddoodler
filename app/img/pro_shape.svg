@@ -1,0 +1,82 @@
+<svg width="767" height="366" viewBox="0 0 767 366" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Illustration</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-475 319)">
+<g id="Illustration">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle">
+<use xlink:href="#path0_fill" transform="translate(384 -360)" fill="#C4C4C4"/>
+</g>
+</mask>
+<g id="illustration-paysage" mask="url(#mask0_alpha)">
+<g id="Path 14">
+<use xlink:href="#path1_stroke" transform="translate(719 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy 2">
+<use xlink:href="#path1_stroke" transform="translate(774 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy 3">
+<use xlink:href="#path1_stroke" transform="translate(940 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy 5">
+<use xlink:href="#path1_stroke" transform="translate(994 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy 4">
+<use xlink:href="#path2_stroke" transform="translate(769 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy 6">
+<use xlink:href="#path2_stroke" transform="translate(823 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy">
+<use xlink:href="#path2_stroke" transform="translate(548 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Path 14 Copy 7">
+<use xlink:href="#path2_stroke" transform="translate(602 -216)" fill="#FFFFFF"/>
+</g>
+<g id="Oval 3">
+<use xlink:href="#path3_stroke" transform="translate(737 -318)" fill="#FFFFFF"/>
+</g>
+<g id="Oval 3 Copy">
+<use xlink:href="#path4_stroke" transform="translate(755 -299)" fill="#FFFFFF"/>
+</g>
+<g id="Oval 3 Copy 2">
+<use xlink:href="#path5_stroke" transform="translate(787 -274)" fill="#FFFFFF"/>
+</g>
+<g id="Path 17">
+<use xlink:href="#path6_stroke" transform="translate(1073.21 -256.282)" fill="#FFFFFF"/>
+</g>
+<g id="Path 17 Copy 2">
+<use xlink:href="#path7_stroke" transform="translate(1057 -183)" fill="#FFFFFF"/>
+</g>
+<g id="Path 17 Copy">
+<use xlink:href="#path8_stroke" transform="translate(1089.58 -263.835)" fill="#FFFFFF"/>
+</g>
+<g id="Path 17 Copy 3">
+<use xlink:href="#path9_stroke" transform="translate(1066 -187)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle 11">
+<use xlink:href="#path10_fill" transform="translate(749.702 -187.048)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle 11 Copy 2">
+<use xlink:href="#path10_fill" transform="translate(611.661 -80.0507)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle 11 Copy">
+<use xlink:href="#path10_fill" transform="translate(475.284 -187.048)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 949 0L 949 407L 0 407L 0 0Z"/>
+<path id="path1_stroke" d="M -0.70296 0.71123L 171.297 170.711L 172.703 169.289L 0.70296 -0.71123L -0.70296 0.71123Z"/>
+<path id="path2_stroke" d="M 171.297 -0.71123L -0.70296 169.289L 0.70296 170.711L 172.703 0.71123L 171.297 -0.71123ZM 0.70296 170.711L 172.703 0.71123L 171.297 -0.71123L -0.70296 169.289L 0.70296 170.711Z"/>
+<path id="path3_stroke" d="M 241 120C 241 53.1735 186.826 -1 120 -1L 120 1C 185.722 1 239 54.2781 239 120L 241 120ZM 120 -1C 53.1735 -1 -1 53.1735 -1 120L 1 120C 1 54.2781 54.2781 1 120 1L 120 -1Z"/>
+<path id="path4_stroke" d="M 205 102C 205 45.1147 158.885 -1 102 -1L 102 1C 157.781 1 203 46.2192 203 102L 205 102ZM 102 -1C 45.1147 -1 -1 45.1147 -1 102L 1 102C 1 46.2192 46.2192 1 102 1L 102 -1Z"/>
+<path id="path5_stroke" d="M 142 70C 142 30.7811 109.982 -1 70.5 -1L 70.5 1C 108.891 1 140 31.8991 140 70L 142 70ZM 70.5 -1C 31.0184 -1 -1 30.7811 -1 70L 1 70C 1 31.8991 32.1095 1 70.5 1L 70.5 -1Z"/>
+<path id="path6_stroke" d="M -0.690652 0.723188L 16.7341 17.364L 18.1154 15.9177L 0.690652 -0.723188L -0.690652 0.723188Z"/>
+<path id="path7_stroke" d="M -0.684707 0.728818L 8.99383 9.82157L 10.3632 8.36393L 0.684707 -0.728818L -0.684707 0.728818Z"/>
+<path id="path8_stroke" d="M 24.3532 -0.723188L -0.690652 23.1939L 0.690652 24.6403L 25.7345 0.723188L 24.3532 -0.723188ZM 0.690652 24.6403L 25.7345 0.723188L 24.3532 -0.723188L -0.690652 23.1939L 0.690652 24.6403Z"/>
+<path id="path9_stroke" d="M 13.2258 -0.728818L -0.684707 12.3398L 0.684707 13.7974L 14.5952 0.728818L 13.2258 -0.728818ZM 0.684707 13.7974L 14.5952 0.728818L 13.2258 -0.728818L -0.684707 12.3398L 0.684707 13.7974Z"/>
+<path id="path10_fill" fill-rule="evenodd" d="M 245.668 0L 491.337 245.668L 245.668 491.337L 0 245.668L 245.668 0Z"/>
+</defs>
+</svg>

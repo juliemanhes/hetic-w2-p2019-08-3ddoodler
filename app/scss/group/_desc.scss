@@ -32,6 +32,7 @@
     }
 
     &--top {
+      max-width: 300px;
       @include breakpoint(laptop) {
         display: flex;
         align-items: center;
@@ -43,6 +44,7 @@
     }
 
     &--bottom {
+      max-width: 300px;
       @include breakpoint(laptop) {
         display: flex;
         align-items: center;
@@ -78,7 +80,7 @@
     margin-bottom: 12px;
     text-align: center;
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 24px;
     font-weight: bold;
     @include breakpoint(laptop) {
@@ -89,9 +91,9 @@
   &__text {
 
     &--small {
-      max-width: 114px;
+      // max-width: 160px;
       color: #fff;
-      font-size: 8px;
+      font-size: 14px;
       font-weight: 300;
       @include breakpoint(laptop) {
         font-size: 16px;
@@ -99,9 +101,9 @@
     }
 
     &--medium {
-      max-width: 133px;
+      // max-width: 180px;
       color: #fff;
-      font-size: 8px;
+      font-size: 14px;
       font-weight: 300;
       @include breakpoint(laptop) {
         font-size: 16px;
@@ -109,9 +111,9 @@
     }
 
     &--large {
-      max-width: 141px;
+      // max-width: 200px;
       color: #fff;
-      font-size: 8px;
+      font-size: 14px;
       font-weight: 300;
       @include breakpoint(laptop) {
         font-size: 16px;

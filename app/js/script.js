@@ -46,7 +46,7 @@ var products = document.querySelectorAll('.product .doodler');
 var next = document.querySelector('.product .next');
 var prev = document.querySelector('.product .prev');
 
-function homeSlider() {
+function homeSlider(y) {
 	if (productContainer) {
 		for (let i = 0; i < products.length; i++) {
 			if (i < 2) {
@@ -55,7 +55,12 @@ function homeSlider() {
 			}
 		}
 
-		var y = 0;
+		window.addEventListener("resize", function() {
+			if (window.innerWidth <= 800) {
+				y = 0;
+			}
+		});
+
 		next.addEventListener('click', function(e) {
 			products[y].style.display = 'none';
 			prev.style.display = 'block';
@@ -80,16 +85,56 @@ function homeSlider() {
 	}
 }
 
+var executed = false;
+
 if (window.innerWidth <= 800) {
-	homeSlider();
+	homeSlider(0);
+	var executed = true;
 }
 
 window.addEventListener("resize", function() {
 	if (window.innerWidth <= 800) {
-		homeSlider();
+		for (let i = 0; i < products.length; i++) {
+			if (i < 2) {
+				products[i+1].style.display = 'none';
+				prev.style.display = 'none';
+			}
+		}
+		if (executed === false) {
+			homeSlider(0);
+		}
+		var executed = true;
 	} else {
 		for (let i = 0; i < products.length; i++) {
 				products[i].style.display = 'flex';
 		}
+
+		var executed = false;
 	}
 });
+
+var slider_container = document.querySelectorAll('.projects__nav ul li a');
+var slider_content = document.querySelectorAll('.single-project');
+
+for (var i = 0; i < slider_container.length; i++) {
+	slider_container[i].addEventListener('click', function(e) {
+		if (this.classList.contains('sort-active')) {
+			this.classList.remove('sort-active');
+			for (var y = 0; y < slider_content.length; y++) {
+				slider_content[y].classList.remove('sort-active');
+			}
+
+		} else {
+			for (var j = 0; j < slider_container.length; j++) {
+				slider_container[j].classList.remove('sort-active');
+			}
+			this.classList.add('sort-active');
+			for (var y = 0; y < slider_content.length; y++) {
+				slider_content[y].classList.remove('sort-active');
+				if (slider_content[y].getAttribute("data-cat") != this.getAttribute("href")) {
+					slider_content[y].classList.add('sort-active');
+				}
+			}
+		}
+	});
+}
