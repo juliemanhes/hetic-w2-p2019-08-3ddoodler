@@ -8,6 +8,7 @@
   background-image: url('../img/background_creativity.png');
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   @include breakpoint(phablet) {
     flex-direction: row;
     position: relative;
@@ -40,7 +41,9 @@
   &__container{
     width: 100%;
     padding-left: 25px;
-    overflow: hidden;
+    overflow: scroll;
+    height: auto;
+    display: block;
     @include breakpoint(phablet) {
       width: 60%;
     }

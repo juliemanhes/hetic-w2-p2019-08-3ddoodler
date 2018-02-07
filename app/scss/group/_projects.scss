@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
 
   &__title {
     width: 95%;
@@ -101,17 +100,17 @@
   }
 
   &__container {
-    width: auto;
+    width: 100%;
     margin-top: 50px;
     display: flex;
-    float: left;
-    align-self: flex-start;
-    justify-content: space-between;
-    transform: translateX(7.5%);
+    float: right;
+    align-self: flex-end;
+    justify-content: flex-start;
     cursor: grab;
+    overflow: scroll;
 
     @include breakpoint(tablet) {
-      transform: translateX(10%);
+      width: 85%;
     }
 
     .single-project {
