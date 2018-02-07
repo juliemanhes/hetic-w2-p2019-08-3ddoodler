@@ -1,5 +1,5 @@
 const babelify = require('babelify');
-const browserify = require('browserify')
+const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const concat = require('gulp-concat');
 const del = require('del');
@@ -12,6 +12,7 @@ const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
 const sync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
+const autoprefixer = require('gulp-autoprefixer');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -23,6 +24,7 @@ function scss() {
   return gulp.src('app/scss/style.scss')
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass())
+    .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false }))
     .pipe(gulpif(isProd, minifyCSS()))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(gulp.dest('dist/css'))
@@ -66,6 +68,14 @@ function fonts() {
 }
 
 /**
+* HTML
+*/
+function html() {
+  return gulp.src('app/**/*.html')
+  .pipe(gulp.dest('dist/'));
+}
+
+/**
  * GLOBAL
  */
 
@@ -73,22 +83,15 @@ function clean() {
   return del(['dist']);
 }
 
-/**
-* HTML
-*/
-function html() {
-    return gulp.src('app/**/*.html')
-        .pipe(gulp.dest('dist/'));
-}
 
 
-gulp.task('build', gulp.series(clean, gulp.parallel(scss, js, images, fonts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, scss, js, images, fonts)));
 
-gulp.task('default', gulp.parallel(scss, js, images, fonts, function(done) {
+gulp.task('default', gulp.parallel(html, scss, js, images, fonts, function(done) {
   sync.init({
     server: {
 
-      baseDir: './'
+      baseDir: './dist'
     }
   });
 
