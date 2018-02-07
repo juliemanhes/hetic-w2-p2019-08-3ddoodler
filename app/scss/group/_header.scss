@@ -6,20 +6,12 @@
   background: -o-linear-gradient(318deg, #FF5E62, #FF9966);
   background: linear-gradient(-48deg, #FF5E62, #FF9966);
   &__divider {
-	  content: "";
-	  // position: absolute;
-	  // bottom: -33px;
 	  width: 100%;
-    transform: translateY(50%);
-	  @include breakpoint(phablet) {
-	  	bottom: -64px;
-	  }
-	  @include breakpoint(laptop) {
-	  	bottom: -96px;
-	  }
-	  @include breakpoint(desktop) {
-	  	bottom: -128px;
-	  }
+    transform: translateY(5px);
+
+    &.pro_divider{
+      width: calc(100%/3);
+    }
   }
   &__logo--container {
     text-align: center;
@@ -50,19 +42,19 @@
   	}
   }
   &__button {
-  	width: 166px;
+  	width: 200px;
   	height: 36px;
   	margin: 0 auto;
   	text-align: center;
   	background: none;
   	display: block;
   	position: relative;
-    
+
     a {
-      font-size: 12px;
+      font-size: 15px;
       text-transform: uppercase;
       color:$blue;
-      text-decoration: none;    
+      text-decoration: none;
       z-index: 3;
       position: absolute;
       top: 50%;
@@ -97,7 +89,7 @@
         z-index: 1;
       }
 
-      &:hover {        
+      &:hover {
         a {
           @include breakpoint(laptop) {
            color:$white;
@@ -117,9 +109,10 @@
   		margin-top: 15px;
   	}
     @include breakpoint(laptop) {
-      position: absolute;
-      left: 30%;
-      top: 44%;
+      // position: absolute;
+      // left: 30%;
+      // top: 44%;
+      transform: translate(-15%, -44%);
     }
   }
   &__content {
@@ -150,11 +143,14 @@
   	margin-bottom: 20px;
   	width: 65%;
   	padding-left: 20px;
+    transform: translateY(50%);
+
   	@include breakpoint(phablet) {
   		margin-bottom: 63px;
   		width: 60%;
   	}
   	@include breakpoint(laptop) {
+      transform: translateY(200%);
   		margin-bottom: 0;
   		width: 50%;
       display: flex;
