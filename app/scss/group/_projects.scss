@@ -91,13 +91,17 @@
           text-decoration: none;
           color: $dark-grey;
           transition: 0.3s;
+
+          &.sort-active {
+            text-decoration: line-through;
+          }
         }
       }
     }
   }
 
   &__container {
-    width: 200%;
+    width: auto;
     margin-top: 50px;
     display: flex;
     float: left;
@@ -107,15 +111,22 @@
     cursor: grab;
 
     @include breakpoint(tablet) {
-      width: 150%;
       transform: translateX(10%);
     }
 
     .single-project {
-      width: 20%;
+      min-width: 300px;
       margin: 20px 20px 20px 0;
       position: relative;
 
+      @include breakpoint(tablet) {
+        min-width: 400px;
+      }
+      &.sort-active {
+        min-width: 0;
+        width: 0;
+        overflow: hidden;
+      }
       img {
         width: 100%;
       }

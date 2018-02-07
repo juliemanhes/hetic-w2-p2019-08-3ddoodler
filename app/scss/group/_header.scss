@@ -7,9 +7,10 @@
   background: linear-gradient(-48deg, #FF5E62, #FF9966);
   &__divider {
 	  content: "";
-	  position: absolute;
-	  bottom: -33px;
+	  // position: absolute;
+	  // bottom: -33px;
 	  width: 100%;
+    transform: translateY(50%);
 	  @include breakpoint(phablet) {
 	  	bottom: -64px;
 	  }
@@ -127,19 +128,23 @@
   	margin-top: 20px;
   	align-items:center;
   	position: relative;
-  	img {
-  		width: 25%;
-  		@include breakpoint(phablet) {
-  			width: 20%;
-  			margin-bottom: 10px;
-  		}
-  		@include breakpoint(laptop) {
-  			width: 15%;
-  		}
-  		@include breakpoint(desktop) {
-  			margin-bottom: 25px;
-  		}
-  	}
+    justify-content: center;
+  	// img {
+    //   position: absolute;
+    //   bottom: -50%;
+    //   left: 0;
+  	// 	width: 25%;
+  	// 	@include breakpoint(phablet) {
+  	// 		width: 20%;
+  	// 		margin-bottom: 10px;
+  	// 	}
+  	// 	@include breakpoint(laptop) {
+  	// 		width: 15%;
+  	// 	}
+  	// 	@include breakpoint(desktop) {
+  	// 		margin-bottom: 25px;
+  	// 	}
+  	// }
   }
   &__text {
   	margin-bottom: 20px;
@@ -151,16 +156,21 @@
   	}
   	@include breakpoint(laptop) {
   		margin-bottom: 0;
-  		width: 40%;
+  		width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
   	}
   }
   p {
-  	font-size: 10px;
+  	font-size: 18px;
   	padding-bottom: 10px;
   	@include breakpoint(phablet) {
-  		font-size: 12px;
+  		font-size: 15px;
   	}
   	@include breakpoint(laptop) {
+      max-width: 400px;
   		font-size: 16px;
   	}
   }
@@ -168,13 +178,13 @@
   	text-align: center;
   	font-family: $font-black;
   	margin-bottom: 10px;
-  	font-size:20px;
+  	font-size: 22px;
   	@include breakpoint(phablet) {
-  		position: absolute;
-  		right: 2%;
+  		// position: absolute;
+  		// right: 2%;
   	}
   	@include breakpoint(laptop) {
-  		right: 25%;
+  		// right: 25%;
   		font-size: 33px;
   	}
   }
